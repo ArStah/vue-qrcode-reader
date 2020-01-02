@@ -4,7 +4,7 @@ self.addEventListener("message", function(event) {
   const imageData = event.data;
 
   const result = jsQR(imageData.data, imageData.width, imageData.height, {
-    inversionAttempts: "dontInvert"
+    inversionAttempts: "invertFirst"
   });
 
   let content = null;
